@@ -1,0 +1,59 @@
+<div class="row" style="margin-top: 40px">
+  <div class="col-sm-3 mx-auto text-center">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <i class="bi bi-twitter" style="font-size: 100px"></i>
+      <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
+
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="user"
+          formControlName="username"
+        />
+
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingConfirmPassword"
+          placeholder="Password"
+          formControlName="confirmPass"
+        />
+        <label for="floatingConfirmPassword">Confirm Password</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingBio"
+          placeholder="Bio"
+          formControlName="bio"
+        />
+        <label for="floatingBio">Bio</label>
+      </div>
+
+      <button
+        class="w-100 btn btn-outline-dark"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Sign Up
+      </button>
+      <p class="mt-5 mb-3 text-muted">TweetUp © 2017–2022</p>
+    </form>
+  </div>
+</div>
