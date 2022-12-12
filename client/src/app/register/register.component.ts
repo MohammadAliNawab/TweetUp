@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  errorMessage: String = '';
   form: FormGroup = new FormGroup({});
   constructor(
     private fb: FormBuilder,
@@ -43,6 +44,7 @@ export class RegisterComponent implements OnInit {
         // If there is an error
         (error) => {
           console.log(error);
+          this.errorMessage = 'User Already Exists';
         },
 
         // When observable completes

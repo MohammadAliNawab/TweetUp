@@ -12,9 +12,11 @@ router.post("/register", async (req, res, next) => {
       bio: req.body.bio,
     };
     const user = await userService.register(newUser);
-    res.json({ success: true, message: "Registration is successful" });
+    res
+      .status(200)
+      .json({ success: true, message: "Registration is successful" });
   } catch (err) {
-    res.json({ success: false, msg: err.message });
+    res.status(401).json({ success: false, msg: err.message });
   }
 });
 

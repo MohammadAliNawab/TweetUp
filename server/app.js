@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/user", require("./routes/users"));
-
+app.all("*", (req, res, next) => res.redirect("/"));
 app.listen(process.env.PORT || 4000, () =>
   console.log("Server started listening on port 4000")
 );

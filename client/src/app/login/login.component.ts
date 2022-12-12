@@ -14,6 +14,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  errorMessage: String = '';
   form: FormGroup;
   constructor(
     private fb: FormBuilder,
@@ -42,6 +43,7 @@ export class LoginComponent {
 
         // If there is an error
         (error) => {
+          this.errorMessage = 'Incorrect Username or Password';
           console.log(error);
         },
 

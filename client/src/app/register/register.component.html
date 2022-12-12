@@ -53,6 +53,8 @@
       >
         Sign Up
       </button>
+      <p *ngIf="errorMessage" class="text text-danger">{{ errorMessage }}</p>
+      <a routerLink="/login">Already Registerd? Sign In here</a>
       <p class="mt-5 mb-3 text-muted">TweetUp © 2017–2022</p>
     </form>
   </div>

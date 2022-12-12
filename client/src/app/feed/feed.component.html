@@ -10,7 +10,7 @@
         rows="3"
         [(ngModel)]="tweet"
       ></textarea>
-      <button class="btn btn-primary" (click)="postTweet()">Tweet</button>
+      <button class="btn btn-primary mt-3" (click)="postTweet()">Tweet</button>
     </div>
     <div *ngFor="let tweet of feeds" class="pb-4">
       <img
@@ -21,10 +21,8 @@
         width="100px"
       /><span>{{ tweet.user }}</span>
       <div class="card-body">
-        <h5 class="card-title pb-3">Tweet Time : {{ tweet.dateOfTweet }}</h5>
-        <p class="card-text">
-          {{ tweet.tweet }}
-        </p>
+        <h5 class="card-title mb-3">{{ tweet.tweet }}</h5>
+        <p class="card-text">Tweeted On {{ tweet.dateOfTweet }}</p>
       </div>
     </div>
   </div>
@@ -34,8 +32,8 @@
         src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
         class=""
         alt="..."
-        height="50px"
-        width="50px"
+        height="60px"
+        width="60px"
       />
       <div class="card-body">
         <h5 class="card-title">{{ user.username }}</h5>
